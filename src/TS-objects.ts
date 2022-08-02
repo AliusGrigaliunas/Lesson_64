@@ -1,4 +1,5 @@
 type Student = {
+  id:string,
   name: string,
   surname: string,
   age: Number,
@@ -8,6 +9,7 @@ type Student = {
 };
 
 const student1: Student = {
+  id: '39304075689',
   name: 'Alius',
   surname: 'Grigaliūnas',
   age: 23,
@@ -17,6 +19,7 @@ const student1: Student = {
 };
 
 const student2: Student = {
+  id: '39304075689',
   name: 'Olandas',
   surname: 'Nyderauskas',
   age: 24,
@@ -25,12 +28,14 @@ const student2: Student = {
 };
 
 const student3: Student = {
+  id: '39304075689',
   name: 'Nicolas',
   surname: 'Ingenting',
   age: 31,
   employed: false,
 };
 const student4: Student = {
+  id: '57235454287',
   name: 'Simba',
   surname: 'Liutauskas',
   age: 16,
@@ -49,6 +54,8 @@ const broship = (bro1:Student, bro2:Student) => {
 
 broship(student2, student3);
 
+console.group('1. Sukurkite funkciją kuri patikrina ar žmogus yra pilnametis');
+
 const IsAdult = (student:Student) => {
   const studentAge = student.age;
   if (studentAge > 18) {
@@ -63,6 +70,10 @@ console.log({
   [createFullname(student3)]: IsAdult(student3),
   [createFullname(student4)]: IsAdult(student4),
 });
+
+console.groupEnd();
+
+console.group('2. Sukurkite funkciją, kuri patikrina ar Person tipo objektas turi ūgį ir svorį');
 
 const isFullyDescribedPerson = (student:Student) => {
   const studentHeight = student.height;
@@ -83,6 +94,22 @@ console.log({
   [createFullname(student3)]: isFullyDescribedPerson(student3),
   [createFullname(student4)]: isFullyDescribedPerson(student4),
 });
+
+console.groupEnd();
+
+console.group('3. Sukurkite funkciją, kuri grąžina žmogaus incialus');
+
+const getInitials = (student:Student) => {
+  const initials = student.id;
+  return `${initials}`;
+};
+console.log({
+  [createFullname(student1)]: getInitials(student1),
+  [createFullname(student2)]: getInitials(student2),
+  [createFullname(student3)]: getInitials(student3),
+});
+
+console.groupEnd();
 
 // const students:Student[] = [{
 //   name: 'Alius',
