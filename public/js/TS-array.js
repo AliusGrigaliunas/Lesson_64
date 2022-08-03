@@ -52,14 +52,14 @@ const words = ['Labas', 'Rytas', 'Televizija'];
 console.log(words);
 function FirstLetterWords(Words) {
     const anagram = Words.map((word) => word[0]).join('');
-    console.log(anagram);
+    return anagram;
 }
-FirstLetterWords(words);
+console.log(FirstLetterWords(words));
 console.groupEnd();
 console.group('3. Sukurkite ir tipais aprašykite funkciją, kuri saudaugintų visus number masyvo skaičius');
 const nums = [1, 7, 8];
 function calc(num) {
-    const a = num.reduce((prev, currentnumber) => prev * currentnumber);
+    const a = num.reduce((prev, currentNumber) => prev * currentNumber);
     return a;
 }
 console.log(calc(nums));

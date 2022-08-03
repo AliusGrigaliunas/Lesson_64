@@ -21,5 +21,5 @@
     "removeComments": true, // ar pašalinti komentarus sukompiliuotuose failuose                    
     "skipLibCheck": true // ar praleisti tipų tikrinimą naudojant bibliotekas
   },
-  "includes": ["src/main.ts","src/primitive-types.ts"]
+  "includes": ["src/TS-array.ts","src/primitive-types.ts","src/TS-objects.ts"]
 }

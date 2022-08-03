@@ -80,12 +80,12 @@ const words: string[] = ['Labas', 'Rytas', 'Televizija'];
 
 console.log(words);
 
-function FirstLetterWords(Words:string[]) {
+function FirstLetterWords(Words:string[]):string {
   const anagram = Words.map((word) => word[0]).join('');
-  console.log(anagram);
+  return anagram;
 }
 
-FirstLetterWords(words);
+console.log(FirstLetterWords(words));
 
 console.groupEnd();
 
@@ -100,8 +100,8 @@ console.group('3. Sukurkite ir tipais aprašykite funkciją, kuri saudaugintų v
 
 const nums: number[] = [1, 7, 8];
 
-function calc(num:number[]) {
-  const a = num.reduce((prev:number, currentnumber:number) => prev * currentnumber);
+function calc(num: number[]): number {
+  const a = num.reduce((prev: number, currentNumber: number) => prev * currentNumber);
   return a;
 }
 
