@@ -36,7 +36,7 @@ console.group('Burglary Series (04): Add its Name');
 {
   const obj = {};
   type Objective = (o : object, n: string, v: number) => Object;
-  const addName :Objective = (obj1, name, value): Object => Object.assign(obj1, { [`${name}`]: value });
+  const addName :Objective = (obj1, name, value) => Object.assign(obj1, { [`${name}`]: value });
 
   console.log(addName(obj, 'Diccus', 150));
   console.log(addName({ Biggus: 150 }, 'Diccus', 150));
