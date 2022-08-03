@@ -1,4 +1,8 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable no-console */
+
+console.group('Drinks sorter:');
+{
 type Drink = {
   drink: string,
   price: number
@@ -24,3 +28,18 @@ const sortArr = (ArrInObj: Drink[]) => {
 };
 
 console.log(sortArr(drinks));
+}
+console.groupEnd();
+
+console.group('Burglary Series (04): Add its Name');
+
+{
+  const obj = {};
+  type Objective = (o : object, n: string, v: number) => Object;
+  const addName :Objective = (obj1, name, value): Object => Object.assign(obj1, { [`${name}`]: value });
+
+  console.log(addName(obj, 'Diccus', 150));
+  console.log(addName({ Biggus: 150 }, 'Diccus', 150));
+}
+
+console.groupEnd();
